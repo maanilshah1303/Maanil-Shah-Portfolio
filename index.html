@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maanil Shah | Official Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('uploaded:anc2.jpeg-044bad06-3388-4292-b1d9-10edeb0678b7')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated-section {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .journey-step {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        .journey-step:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #0d9488;
+            border-radius: 2px;
+        }
+        .journey-step:after {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: #111827;
+            border: 4px solid #14b8a6;
+            border-radius: 50%;
+        }
+    </style>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-950 text-white font-sans">
+    
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-gray-950 bg-opacity-80 backdrop-blur-sm p-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-bold text-teal-400 rounded-lg transition-colors hover:text-white">Maanil Shah</a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="text-gray-300 hover:text-teal-400 transition-colors">About</a>
+                <a href="#experience" class="text-gray-300 hover:text-teal-400 transition-colors">Experience</a>
+                <a href="#achievements" class="text-gray-300 hover:text-teal-400 transition-colors">Achievements</a>
+                <a href="#moments" class="text-gray-300 hover:text-teal-400 transition-colors">Moments</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-teal-400 transition-colors">Testimonials</a>
+                <a href="#contact" class="text-gray-300 hover:text-teal-400 transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 text-center space-y-2">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-teal-400 transition-colors rounded-lg">About</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-teal-400 transition-colors rounded-lg">Experience</a>
+            <a href="#achievements" class="block py-2 text-gray-300 hover:text-teal-400 transition-colors rounded-lg">Achievements</a>
+            <a href="#moments" class="block py-2 text-gray-300 hover:text-teal-400 transition-colors rounded-lg">Moments</a>
+            <a href="#testimonials" class="block py-2 text-gray-300 hover:text-teal-400 transition-colors rounded-lg">Testimonials</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-teal-400 transition-colors rounded-lg">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-hero-pattern bg-cover bg-center min-h-screen flex flex-col justify-center items-center text-center p-8 relative">
+        <div class="absolute inset-0 bg-gray-950 opacity-60"></div>
+        <div class="relative z-10 animated-section">
+            <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-6 border-4 border-teal-400 shadow-xl transition-transform hover:scale-105">
+                <img src="DSC_1561.JPG" alt="Maanil Shah Profile" class="object-cover w-full h-full">
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Maanil Shah</h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-2xl mb-8">
+                3rd Year Computer Engineering Student & A Professional Host, Anchor & Event Manager.
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="http://www.linkedin.com/in/maanilshah" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-teal-400 transition-colors">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/maanil_shah/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-teal-400 transition-colors">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1B44TcTkCk/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-teal-400 transition-colors">
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-20 px-8 animated-section">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-teal-400">About Me</h2>
+        <div class="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg text-center space-y-6">
+            <img src="anc2.jpeg" alt="Event Hosting" class="mx-auto mb-6 rounded-xl shadow-xl w-64 h-64 object-cover">
+            <p>
+                I am a 3rd year Computer Engineering student at Silver Oak University with a passion that extends far beyond academics. I am an active leader, a decorated athlete, and a professional event host, combining my technical skills with strong communication and management abilities. My journey is defined by a commitment to excellence in every field I pursue.
+            </p>
+            <img src="anc3.jpeg" alt="Speaking at Silver Oak University" class="mx-auto mb-6 rounded-xl shadow-xl w-64 h-64 object-cover">
+            <p>
+                As a student, I am dedicated to my field, having completed an internship in Web Development (AI Prompt Engineering) at Staytuned LLP and holding certifications in HTML and CSS. These technical skills are complemented by my hands-on leadership roles in various university cells and organizations.
+            </p>
+            <img src="anc4.jpeg" alt="Engaging with the crowd" class="mx-auto mb-6 rounded-xl shadow-xl w-64 h-64 object-cover">
+            <p>
+                Outside of my academic life, I am a professional host and anchor with a track record of hosting over 25 events in a single year. I am also the founder of <strong>Prasang Planners - The Socio Culture & The Event Management Company</strong>, which has successfully managed more than 20 events in the last six months. My passion for community building led me to co-found <strong>TCC - The Core Crew</strong>, one of Ahmedabad's fastest-growing student communities, where I actively support student initiatives.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section (Journey Form) -->
+    <section id="experience" class="bg-gray-900 py-20 px-8 animated-section">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-teal-400">My Journey & Experience</h2>
+        <div class="max-w-3xl mx-auto space-y-12 md:space-y-16">
+            <div class="flex justify-center mb-8">
+                <img src="anc5.jpeg" alt="Event Management" class="rounded-xl shadow-xl w-64 h-64 object-cover">
+            </div>
+            <!-- Journey Step 1 -->
+            <div class="journey-step">
+                <div class="pl-8">
+                    <h3 class="text-2xl font-semibold mb-2">Prasang Planners</h3>
+                    <p class="text-gray-400">Founder & Event Manager</p>
+                    <p class="text-gray-300 mt-2">
+                        Founded my own event management company, which has successfully managed and executed over 20+ events in the last six months. We specialize in socio-cultural events and client-specific celebrations.
+                    </p>
+                </div>
+            </div>
+            <!-- Journey Step 2 -->
+            <div class="journey-step">
+                <div class="pl-8">
+                    <h3 class="text-2xl font-semibold mb-2">Professional Hosting & Anchoring</h3>
+                    <p class="text-gray-400">Host & Anchor</p>
+                    <p class="text-gray-300 mt-2">
+                        I've hosted and anchored more than 50 university events and over 25 professional events annually. I bring energy, charisma, and smooth stage management to every event, ensuring it's a huge success.
+                    </p>
+                </div>
+            </div>
+            <!-- Journey Step 3 -->
+            <div class="journey-step">
+                <div class="pl-8">
+                    <h3 class="text-2xl font-semibold mb-2">The Core Crew (TCC)</h3>
+                    <p class="text-gray-400">Founding Member</p>
+                    <p class="text-gray-300 mt-2">
+                        As a founding member, I helped establish TCC, Ahmedabad's fastest-growing student community, which actively supports and promotes student initiatives.
+                    </p>
+                </div>
+            </div>
+            <!-- Journey Step 4 -->
+            <div class="journey-step">
+                <div class="pl-8">
+                    <h3 class="text-2xl font-semibold mb-2">IEEE Computer Society, Silver Oak University</h3>
+                    <p class="text-gray-400">Former Secretary & Student Branch Representative</p>
+                    <p class="text-gray-300 mt-2">
+                        Served in key leadership roles, helping to organize and manage technical events and activities that benefited the student community. This experience enhanced my organizational and teamwork skills.
+                    </p>
+                </div>
+            </div>
+            <!-- Journey Step 5 -->
+            <div class="journey-step">
+                <div class="pl-8">
+                    <h3 class="text-2xl font-semibold mb-2">E-Cell & Ignite Incubation Centre</h3>
+                    <p class="text-gray-400">Founding Member</p>
+                    <p class="text-gray-300 mt-2">
+                        As a founding member, I helped establish a thriving entrepreneurial ecosystem at my university, supporting and nurturing student initiatives from the ground up. I also led a team of 10 members to secure 4th position all over India at NEC 2023 organized by E-Cell, IIT Bomaby.
+                    </p>
+                </div>
+            </div>
+             <!-- Journey Step 6 -->
+            <div class="journey-step">
+                <div class="pl-8">
+                    <h3 class="text-2xl font-semibold mb-2">Cultural Cell, Silver Oak University</h3>
+                    <p class="text-gray-400">Core Member</p>
+                    <p class="text-gray-300 mt-2">
+                        I led a team of 15 members to secure a top 15 position in the Drama (Third Bell) competition at Mood Indigo 2024, Asia's largest cultural festival organized by IIT Bombay.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section (Tabular Form) -->
+    <section id="achievements" class="container mx-auto py-20 px-8 animated-section">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-teal-400">Achievements & Recognition</h2>
+        <div class="max-w-4xl mx-auto">
+            <table class="w-full text-left table-auto rounded-xl overflow-hidden shadow-xl">
+                <thead class="bg-gray-800 text-teal-400">
+                    <tr>
+                        <th class="p-4">Category</th>
+                        <th class="p-4">Achievement</th>
+                        <th class="p-4 hidden sm:table-cell">Details</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-gray-900 text-gray-300">
+                    <tr class="border-b border-gray-800">
+                        <td class="p-4 font-semibold">Sports</td>
+                        <td class="p-4">1st Position, Table Tennis</td>
+                        <td class="p-4 hidden sm:table-cell">Intra Group of Colleges Tournament 2025</td>
+                    </tr>
+                    <tr class="border-b border-gray-800">
+                        <td class="p-4 font-semibold">Sports</td>
+                        <td class="p-4">2nd Position, Badminton</td>
+                        <td class="p-4 hidden sm:table-cell">Intra Group of Colleges Tournament 2025</td>
+                    </tr>
+                    <tr class="border-b border-gray-800">
+                        <td class="p-4 font-semibold">Debate</td>
+                        <td class="p-4">1st Position, COT Debate League 2025</td>
+                        <td class="p-4 hidden sm:table-cell">Secured victory through strong command of language and persuasive skills.</td>
+                    </tr>
+                    <tr class="border-b border-gray-800">
+                        <td class="p-4 font-semibold">Technical</td>
+                        <td class="p-4">Internship in Web Dev (AI Prompt Engineering)</td>
+                        <td class="p-4 hidden sm:table-cell">Completed at Staytuned LLP, Ahmedabad.</td>
+                    </tr>
+                     <tr class="border-b border-gray-800">
+                        <td class="p-4 font-semibold">Leadership</td>
+                        <td class="p-4">NEC 2023 - 4th Position All Over India</td>
+                        <td class="p-4 hidden sm:table-cell">Led a team of 10 members from E-Cell Ignite to secure a top position.</td>
+                    </tr>
+                     <tr class="border-b border-gray-800">
+                        <td class="p-4 font-semibold">Cultural</td>
+                        <td class="p-4">Mood Indigo 2024 - Top 15 in Drama</td>
+                        <td class="p-4 hidden sm:table-cell">Led a team of 15 members to achieve a top position at Asia's largest cultural festival.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Moments in Action Section -->
+    <section id="moments" class="bg-gray-900 py-20 px-8 animated-section">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-teal-400">Moments in Action</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div class="rounded-xl overflow-hidden shadow-xl card-hover transition-transform duration-300">
+                <img src="anc2.jpeg" alt="Event Hosting" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-xl card-hover transition-transform duration-300">
+                <img src="anc3.jpeg" alt="Speaking on stage at Silver Oak University" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-xl card-hover transition-transform duration-300">
+                <img src="anc4.jpeg" alt="Engaging with the crowd" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-xl card-hover transition-transform duration-300">
+                <img src="anc5.jpeg" alt="Event Management" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-xl card-hover transition-transform duration-300">
+                <img src="anc6.jpeg" alt="Hosting on stage with a microphone" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-xl card-hover transition-transform duration-300">
+                <img src="DSC_1561.JPG" alt="Profile at event" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto py-20 px-8 animated-section">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-teal-400">Testimonials</h2>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-gray-900 rounded-xl p-8 shadow-xl card-hover transition-transform duration-300">
+                <p class="italic text-gray-300 mb-4">"Maanil hosted our SOS Bharat podcast with professionalism and incredible poise. He brought so much energy and clarity to the conversation, making it a huge success."</p>
+                <p class="font-semibold text-teal-400">- Mr. Aum Pandya, Xavoc Technologies</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-gray-900 rounded-xl p-8 shadow-xl card-hover transition-transform duration-300">
+                <p class="italic text-gray-300 mb-4">"Maanil's organization and hosting skills were top-notch for my birthday and farewell party. He managed everything flawlessly, allowing me to enjoy my special day without any worries."</p>
+                <p class="font-semibold text-teal-400">- Ms. Mauli Pandya</p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="bg-gray-900 rounded-xl p-8 shadow-xl card-hover transition-transform duration-300">
+                <p class="italic text-gray-300 mb-4">"I highly recommend Maanil for his event management and hosting. He managed and hosted my daughter's birthday party with great enthusiasm and attention to detail."</p>
+                <p class="font-semibold text-teal-400">- Mr. Ankit Shah</p>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="bg-gray-900 rounded-xl p-8 shadow-xl card-hover transition-transform duration-300">
+                <p class="italic text-gray-300 mb-4">"Maanil hosted the college rap battle at Synapse 2025, and his stage presence and humor made the event truly unforgettable. He's a natural."</p>
+                <p class="font-semibold text-teal-400">- Mr. Ridhang Jain</p>
+            </div>
+            <!-- Testimonial 5 -->
+            <div class="bg-gray-900 rounded-xl p-8 shadow-xl card-hover transition-transform duration-300">
+                <p class="italic text-gray-300 mb-4">"Utkal's daughter's birthday party was managed and hosted beautifully by Maanil. Everything was taken care of, and the event was a great success."</p>
+                <p class="font-semibold text-teal-400">- Mr. Utkal Patel</p>
+            </div>
+            <!-- Testimonial 6 -->
+            <div class="bg-gray-900 rounded-xl p-8 shadow-xl card-hover transition-transform duration-300">
+                <p class="italic text-gray-300 mb-4">"Maanil's team provided decor and photography services for my wife's Ethhai Tap Parna and his hosting made the event lively and engaging. A great service from start to finish."</p>
+                <p class="font-semibold text-teal-400">- Mr. Hardik Sheth</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-900 py-20 px-8 animated-section">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-teal-400">Contact Me</h2>
+        <div class="max-w-2xl mx-auto p-8 rounded-xl shadow-xl">
+            <p class="text-center text-gray-300 mb-8">
+                I'm always open to new opportunities. Feel free to connect with me.
+            </p>
+            <div class="space-y-6 text-center">
+                <div>
+                    <p class="text-xl font-semibold mb-2">Personal Email</p>
+                    <a href="mailto:connectwithmaanil@gmail.com" class="text-teal-400 hover:underline transition-colors">connectwithmaanil@gmail.com</a>
+                </div>
+                <div>
+                    <p class="text-xl font-semibold mb-2">Company Email</p>
+                    <a href="mailto:inquiry@prasangplanners.com" class="text-teal-400 hover:underline transition-colors">inquiry@prasangplanners.com</a>
+                </div>
+                <div>
+                    <p class="text-xl font-semibold mb-2">Social Media</p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="http://www.linkedin.com/in/maanilshah" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-teal-400 transition-colors">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/maanil_shah/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-teal-400 transition-colors">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1B44TcTkCk/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-teal-400 transition-colors">
+                            <i class="fab fa-facebook-square fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-8 text-center text-gray-500">
+        <p class="text-sm">&copy; 2025 Maanil Shah. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scroll for mobile menu links
+            const links = document.querySelectorAll('#mobile-menu a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated-section');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
